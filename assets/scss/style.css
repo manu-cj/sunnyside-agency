@@ -36,24 +36,29 @@ header #menu #logo {
 }
 header #menu nav {
   width: 400px;
+  display: flex;
+  flex-direction: row;
 }
 header #menu nav a {
-  font-size: 13px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 10px;
+  font-size: 15px;
   border-radius: 15px;
+  display: block;
+  width: 25%;
+  height: 25px;
+  color: hsl(0, 0%, 100%);
 }
-header #menu nav :hover {
-  inline-size: 25%;
+header #menu nav a:hover {
   font-size: 18px;
-  padding: 10px;
-  background-color: aliceblue;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(212, 27%, 19%);
 }
 header h1 {
-  margin-top: 50px;
+  margin-top: 100px;
   color: aliceblue;
   font-size: 72px;
+}
+header #icon-arrow-down {
+  margin-top: 150px;
 }
 
 main article {
@@ -66,8 +71,22 @@ main article main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  align-content: center;
+  gap: 30px;
+  text-align: left;
+}
+main article main h2 {
+  display: block;
+  width: 40%;
+}
+main article main p {
+  display: block;
+  width: 50%;
+  font-size: 15px;
+  color: hsl(213, 9%, 39%);
+  margin-left: 10%;
 }
 main article img {
   width: 50%;
@@ -94,16 +113,27 @@ main #footer-section article {
   gap: 30px;
   padding-bottom: 30px;
   text-align: center;
+  color: hsl(212, 27%, 19%);
+}
+main #footer-section article p {
+  display: block;
+  width: 49%;
+  word-break: break-all;
 }
 main #footer-section #footer-article-left {
   background-image: url(/assets/img/photos/image-graphic-design.jpg);
+  color: hsl(167, 40%, 24%);
 }
 main #footer-section #footer-article-right {
   background-image: url(/assets/img/photos/image-gallery-orange.jpg);
+  color: hsl(198, 62%, 26%);
 }
-main #footer-section h2 {
+main #footer-section #title-client-testimonials {
   width: 100%;
   text-align: center;
+  margin-top: 130px;
+  margin-bottom: 20px;
+  color: hsl(210, 4%, 67%);
 }
 main #footer-section #client-testimonials {
   width: 100%;
@@ -121,6 +151,23 @@ main #footer-section #client-testimonials article {
 main #footer-section #client-testimonials article img {
   width: 15%;
   border-radius: 50%;
+}
+main #footer-section #client-testimonials article .comment {
+  font-size: 13px;
+  display: block;
+  width: 50%;
+}
+main #footer-section #client-testimonials article .footer-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #footer-section #client-testimonials article .footer-div .job {
+  color: hsl(210, 4%, 67%);
+  font-size: 12px;
 }
 main #footer-section #gallery-picture {
   width: 100%;
