@@ -88,11 +88,32 @@ main article main p {
   color: hsl(213, 9%, 39%);
   margin-left: 10%;
 }
+main article main #yellowSubline {
+  width: 20%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: hsl(51, 100%, 49%);
+  z-index: -1;
+  position: relative;
+  bottom: 37px;
+  opacity: 0.5;
+}
+main article main #redSubline {
+  width: 20%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: hsl(7, 99%, 70%);
+  z-index: -1;
+  position: relative;
+  bottom: 37px;
+  opacity: 0.5;
+}
 main article img {
   width: 50%;
 }
 main article a {
-  text-decoration-line: underline;
+  color: hsl(212, 27%, 19%);
+  text-decoration-line: none;
   font-size: 24px;
 }
 main #footer-section {

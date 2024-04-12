@@ -110,6 +110,28 @@ main {
                 color: hsl(213, 9%, 39%);
                 margin-left: 10%;
             }
+
+            #yellowSubline {
+                width: 20%;
+                height: 10px;
+                border-radius: 10px;
+                background-color: $yellow;
+                z-index: -1;
+                position: relative;
+                bottom: 37px;
+                opacity: 0.5;
+            }
+
+            #redSubline {
+                width: 20%;
+                height: 10px;
+                border-radius: 10px;
+                background-color: $softRed;
+                z-index: -1;
+                position: relative;
+                bottom: 37px;
+                opacity: 0.5;
+            }
         }
 
         img {
@@ -117,7 +139,8 @@ main {
         }
 
         a {
-            text-decoration-line:underline;
+            color: $blueDesatured;
+            text-decoration-line: none;
             font-size: 24px;
         }
     }
