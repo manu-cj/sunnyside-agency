@@ -288,21 +288,58 @@ footer {
     body {
         header {
             width: 100%;
-            height: 800px;
+            height: 900px;
             background-image: url(../img/photos/image-header.jpg);
             background-size: cover;
             background-position: center;
             text-align: center;
             #menu {
+                width: 90%;
+                height: max-content;
+                flex-wrap: wrap;
+                position: fixed;
+                z-index: 3;
+                margin-bottom: 50px;
                 #menu-hamburger {
                     display: block;
+                    float: right;
+                }
+                &:hover {
+                    #menu-hamburger{
+                        filter: grayscale(2);
+                    }
+                    nav {
+                        width: 100%;
+                        margin-top: 100px;
+                        padding: 20px;
+                        background-color: $white;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-right: $white solid 20px;
+                        border-top: #38bdfb solid 20px;
+                        text-align: center;
+                        a {
+                            display: block;
+                            width: 40%;
+                            height: 40px;
+                            padding: 10px;
+                            margin: 20px;
+                            border-radius: 30px;
+                            color: $blueDesatured;
+                        }
+                        a:nth-child(4) {
+                            background-color: $yellow;
+                        }
+                    }
                 }
                 nav {
                     display: none;
                 }
             }
             h1 {
-                margin-top: 20px;
+                margin-top: 150px;
             }
             #icon-arrow-down {
                 margin-top: 50px;

@@ -243,20 +243,58 @@ footer #social-links {
 @media screen and (max-width: 600px) {
   body header {
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-image: url(../img/photos/image-header.jpg);
     background-size: cover;
     background-position: center;
     text-align: center;
   }
+  body header #menu {
+    width: 90%;
+    height: -moz-max-content;
+    height: max-content;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 3;
+    margin-bottom: 50px;
+  }
   body header #menu #menu-hamburger {
     display: block;
+    float: right;
+  }
+  body header #menu:hover #menu-hamburger {
+    filter: grayscale(2);
+  }
+  body header #menu:hover nav {
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: hsl(0, 0%, 100%) solid 20px;
+    border-top: #38bdfb solid 20px;
+    text-align: center;
+  }
+  body header #menu:hover nav a {
+    display: block;
+    width: 40%;
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 30px;
+    color: hsl(212, 27%, 19%);
+  }
+  body header #menu:hover nav a:nth-child(4) {
+    background-color: hsl(51, 100%, 49%);
   }
   body header #menu nav {
     display: none;
   }
   body header h1 {
-    margin-top: 20px;
+    margin-top: 150px;
   }
   body header #icon-arrow-down {
     margin-top: 50px;
