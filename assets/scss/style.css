@@ -157,11 +157,11 @@ main #footer-section article p {
   word-break: break-all;
 }
 main #footer-section #footer-article-left {
-  background-image: url(assets/img/photos/image-graphic-design.jpg);
+  background-image: url(../img/photos/image-graphic-design.jpg);
   color: hsl(167, 40%, 24%);
 }
 main #footer-section #footer-article-right {
-  background-image: url(assets/img/photos/image-photography.jpg);
+  background-image: url(../img/photos/image-photography.jpg);
   color: hsl(198, 62%, 26%);
 }
 main #footer-section #title-client-testimonials {
