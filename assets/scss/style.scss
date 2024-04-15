@@ -34,6 +34,7 @@ header {
     height:750px;
     background-image: url(/assets/img/photos/image-header.jpg);
     background-size: cover;
+    background-position: center;
     text-align: center;
 
     #menu {
@@ -44,6 +45,9 @@ header {
         justify-content: space-between;
         #logo {
             float: left;
+        }
+        #menu-hamburger {
+            display: none;
         }
         nav {
             width: 400px;
@@ -59,8 +63,21 @@ header {
 
                 &:hover {            
                     font-size: 18px;
-                    background-color: $white;
-                    color: $blueDesatured;
+                    animation-name: showHover;
+                    animation-duration: 1s;
+                    transition: ease-in;
+                    
+                }
+                @keyframes showHover {
+                    from {
+                        background-color: none;
+                        color: $white;
+                    }
+                    to {
+                        background-color: $white;
+                        color: $blueDesatured;
+                    }
+                    
                 }
             }
             
@@ -76,12 +93,11 @@ header {
             margin-top: 150px;
         }
         
-    }
+}
 
     
 
 main {
-
     article {
         display: flex;
         flex-direction: row;
@@ -176,12 +192,12 @@ main {
         }
     
         #footer-article-right {
-            background-image: url(/assets/img/photos/image-gallery-orange.jpg);
+            background-image: url(/assets/img/photos/image-photography.jpg);
             color: $DarkBlue;
         }
         #title-client-testimonials {
-            width: 100%;
-            text-align: center;
+            width: 100% !important;
+            text-align: center !important;
             margin-top: 130px;
             margin-bottom: 20px;
             color: hsl(210, 4%, 67%);
@@ -266,4 +282,124 @@ footer {
     #social-links {
         gap: 30px;
     }
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        header {
+            width: 100%;
+            height: 600px;
+            background-image: url(/assets/img/photos/image-header.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            #menu {
+                #menu-hamburger {
+                    display: block;
+                }
+                nav {
+                    display: none;
+                }
+            }
+            h1 {
+                margin-top: 20px;
+            }
+            #icon-arrow-down {
+                margin-top: 50px;
+            }
+        }
+        main {
+            article {
+                width: 100%;
+                main {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+
+                #yellowSubline {
+                    width: 40%;
+                }
+    
+                #redSubline {
+                    width: 40%;
+                }
+            }
+            #first-article {
+                flex-direction: column-reverse;
+            }
+            #second-article {
+                flex-direction: column;
+            }
+        }
+    
+        #footer-section {
+            flex-direction: column;
+            flex-wrap: nowrap;
+    
+            #footer-article-left, #footer-article-right {
+                width: 100%;
+                background-position: center;
+                p {
+                    width: 80%;
+                }
+    
+            }
+        }
+        #title-client-testimonials {
+            margin-top: 20px !important;
+            margin-bottom: 20px;
+            
+        }
+    
+        #client-testimonials {
+            width: 100%;
+            height: 900px !important;
+            flex-direction: column !important;
+            
+            .client {
+                width: 100% !important;
+                height: 300px;
+                margin-top: 15px !important;
+                img {
+                    width: 20% !important;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+
+        #gallery-picture {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            img {
+                width: 50% !important;
+                height: 50% !important;
+            }
+        }
+
+        footer {
+        
+            section {
+                display: flex;
+                margin: 15px;
+            }
+        
+            #footer-menu {
+                gap: 15px;
+                
+            }
+        
+            #social-links {
+                gap: 30px;
+            }
+        }
+
+    }
+    
 }

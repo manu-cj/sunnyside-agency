@@ -22,6 +22,7 @@ header {
   height: 750px;
   background-image: url(/assets/img/photos/image-header.jpg);
   background-size: cover;
+  background-position: center;
   text-align: center;
 }
 header #menu {
@@ -33,6 +34,9 @@ header #menu {
 }
 header #menu #logo {
   float: left;
+}
+header #menu #menu-hamburger {
+  display: none;
 }
 header #menu nav {
   width: 400px;
@@ -49,8 +53,19 @@ header #menu nav a {
 }
 header #menu nav a:hover {
   font-size: 18px;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(212, 27%, 19%);
+  animation-name: showHover;
+  animation-duration: 1s;
+  transition: ease-in;
+}
+@keyframes showHover {
+  from {
+    background-color: none;
+    color: hsl(0, 0%, 100%);
+  }
+  to {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(212, 27%, 19%);
+  }
 }
 header h1 {
   margin-top: 100px;
@@ -146,12 +161,12 @@ main #footer-section #footer-article-left {
   color: hsl(167, 40%, 24%);
 }
 main #footer-section #footer-article-right {
-  background-image: url(/assets/img/photos/image-gallery-orange.jpg);
+  background-image: url(/assets/img/photos/image-photography.jpg);
   color: hsl(198, 62%, 26%);
 }
 main #footer-section #title-client-testimonials {
-  width: 100%;
-  text-align: center;
+  width: 100% !important;
+  text-align: center !important;
   margin-top: 130px;
   margin-bottom: 20px;
   color: hsl(210, 4%, 67%);
@@ -223,4 +238,99 @@ footer #footer-menu {
 }
 footer #social-links {
   gap: 30px;
+}
+
+@media screen and (max-width: 1080px) {
+  body header {
+    width: 100%;
+    height: 600px;
+    background-image: url(/assets/img/photos/image-header.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  body header #menu #menu-hamburger {
+    display: block;
+  }
+  body header #menu nav {
+    display: none;
+  }
+  body header h1 {
+    margin-top: 20px;
+  }
+  body header #icon-arrow-down {
+    margin-top: 50px;
+  }
+  body main article {
+    width: 100%;
+  }
+  body main article main {
+    width: 100%;
+  }
+  body main article img {
+    width: 100%;
+  }
+  body main article #yellowSubline {
+    width: 40%;
+  }
+  body main article #redSubline {
+    width: 40%;
+  }
+  body main #first-article {
+    flex-direction: column-reverse;
+  }
+  body main #second-article {
+    flex-direction: column;
+  }
+  body #footer-section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  body #footer-section #footer-article-left, body #footer-section #footer-article-right {
+    width: 100%;
+    background-position: center;
+  }
+  body #footer-section #footer-article-left p, body #footer-section #footer-article-right p {
+    width: 80%;
+  }
+  body #title-client-testimonials {
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+  }
+  body #client-testimonials {
+    width: 100%;
+    height: 900px !important;
+    flex-direction: column !important;
+  }
+  body #client-testimonials .client {
+    width: 100% !important;
+    height: 300px;
+    margin-top: 15px !important;
+  }
+  body #client-testimonials .client img {
+    width: 20% !important;
+    border-radius: 50%;
+  }
+  body #gallery-picture {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  body #gallery-picture img {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  body footer section {
+    display: flex;
+    margin: 15px;
+  }
+  body footer #footer-menu {
+    gap: 15px;
+  }
+  body footer #social-links {
+    gap: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
